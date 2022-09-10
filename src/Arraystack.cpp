@@ -21,6 +21,7 @@ int Arraystack::pop()
     if(topp<0)
     {
         std::cout<<"stack underflow";
+        return -1;
     }else
     {
         int topitem = arr[topp];
@@ -53,5 +54,7 @@ bool Arraystack::isFull()
     if ( topp >= (MAX-1) )
     {
         std::cout<<"Stack Overflow"<<std::endl;
+        return true;
     }
+    return false;
 }

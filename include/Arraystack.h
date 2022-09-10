@@ -11,7 +11,7 @@ public:
     Arraystack() {}
     ~Arraystack() {}
 
-    int arr[100];
+    int arr[MAX];
 
     void push(int item);
     int pop();
