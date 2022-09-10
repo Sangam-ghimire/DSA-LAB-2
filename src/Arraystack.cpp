@@ -1,28 +1,28 @@
-#include"Arraystack.h"
-#include<iostream>
-
+#include "Arraystack.h"
+#include <iostream>
 
 void Arraystack::push(int item)
 {
-    if ( topp >= (MAX-1) )
+    if (topp >= (MAX - 1))
     {
-        std::cout<<"Stack Overflow"<<std::endl;
-    }else
+        std::cout << "Stack Overflow" << std::endl;
+    }
+    else
     {
         topp++;
         arr[topp] = item;
-        std::cout<<item<<"pushed successfully"<<std::endl;
+        std::cout << item << " pushed successfully" << std::endl;
     }
-
 }
 
 int Arraystack::pop()
 {
-    if(topp<0)
+    if (topp < 0)
     {
-        std::cout<<"stack underflow";
+        std::cout << "stack underflow";
         return -1;
-    }else
+    }
+    else
     {
         int topitem = arr[topp];
         topp--;
@@ -32,11 +32,12 @@ int Arraystack::pop()
 
 int Arraystack::top()
 {
-    if(topp<0)
+    if (topp < 0)
     {
-        std::cout<<"Empty Stack";
+        std::cout << "Empty Stack";
         return 0;
-    }else
+    }
+    else
     {
         int x = arr[topp];
         return x;
@@ -45,15 +46,16 @@ int Arraystack::top()
 
 bool Arraystack::isEmpty()
 {
-   if(topp<0) return true;
-   return false;
+    if (topp < 0)
+        return true;
+    return false;
 }
 
-bool Arraystack::isFull() 
+bool Arraystack::isFull()
 {
-    if ( topp >= (MAX-1) )
+    if (topp >= (MAX - 1))
     {
-        std::cout<<"Stack Overflow"<<std::endl;
+        std::cout << "Stack Overflow" << std::endl;
         return true;
     }
     return false;

@@ -5,8 +5,10 @@ bool LinkedList::isEmpty()
 {
     if (head == NULL)
     {
+        // std::cout << "The LinkedList Stack is empty" << std::endl;
         return true;
     }
+    // std::cout << "The LinkedList Stack is not empty\n";
     return false;
 }
 
@@ -15,6 +17,7 @@ void LinkedList::addToHead(int val)
     Node *nnode = new Node(val);
     nnode->next = head;
     head = nnode;
+    std::cout << val << " Added to Stack successfully\n";
 }
 
 int LinkedList::removeFromHead()

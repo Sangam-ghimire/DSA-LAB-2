@@ -16,5 +16,6 @@ int LinkedListStack::top()
 }
 int LinkedListStack::pop()
 {
+
     return L.removeFromHead();
 }

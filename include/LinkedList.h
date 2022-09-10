@@ -19,7 +19,7 @@ public:
     LinkedList() {}
     ~LinkedList() {}
 
-    Node *head;
+    Node *head = NULL;
 
     bool isEmpty();
     void addToHead(int val);
